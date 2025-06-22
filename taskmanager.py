@@ -27,12 +27,15 @@ while choice!="5":
         except:
             print("Please enter a valid number")
     elif choice=="4":
-        t_no=int(input("enter the number of task u wish to mark done"))
-        if(" -DONE" not in tasks[t_no-1]):
-            tasks[t_no-1]=tasks[t_no-1]+" -DONE"
-            print_tasks()
-        else:
-            print("Already marked done")
+        try:
+            t_no=int(input("enter the number of task u wish to mark done"))
+            if(" -DONE" not in tasks[t_no-1]):
+                tasks[t_no-1]=tasks[t_no-1]+" -DONE"
+                print_tasks()
+            else:
+                print("Already marked done")
+        except:
+            print("Please enter a valid number")
     elif choice=="5":
         print("You chose EXIT!Bye")
     else:
